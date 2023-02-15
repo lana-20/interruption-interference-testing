@@ -2,6 +2,11 @@
 
 📝 This post is mostly about Android.
 
+[Why Conduct Interrupt Testing?](https://www.professionalqa.com/interrupt-testing)
+
+<img src="https://user-images.githubusercontent.com/70295997/218905741-a1f5e20e-e7c8-4ee5-a09a-66edc34e1b05.png" width=400>
+
+
 Test the following common scenarios for mobile app testing:
 * Rotation
 * Multi-window
