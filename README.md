@@ -2,6 +2,14 @@
 
 📝 This post is mostly about Android.
 
+Test the following common scenarios for mobile app testing:
+* Rotation
+* Multi-window
+* Language Input
+* User Taps Back Button - [override the onBackPressed() method to implement some custom behavior, for example a "confirm-quit" dialog](https://developer.android.com/guide/components/activities/state-changes#back)
+* System kills app process
+
+
 A poorly implemented [Android Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle) can lead to the following results:
 * Crashing if the user receives a phone call or switches to another app while using your app.
 * Consuming valuable system resources when the user is not actively using it.
@@ -18,3 +26,5 @@ Activities serve as containers for every user interaction within your app, so it
 * The user places your activity in a new windowing environment, such as picture-in-picture (PIP) or multi-window.
 
 In particular, it's important to ensure that your activity behaves correctly in response to the events described in Understanding the Activity Lifecycle.
+
+Different events, some user-triggered and some system-triggered, can cause an Activity to transition from one state to another. The [Activity State Changes document](https://developer.android.com/guide/components/activities/state-changes) describes some common cases in which such transitions happen, and how to handle those transitions.
