@@ -1,6 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/70295997/218906095-46afc481-10a9-488a-a724-2c462382cd69.png" width=40> Location, Network, Configuration
-
-## Why Interruption/Interference Scenarios are Important in Testing the Mobile App Activities
+# <img src="https://user-images.githubusercontent.com/70295997/218906095-46afc481-10a9-488a-a724-2c462382cd69.png" width=40> Why Interruption/Interference Configuration is Important in Testing the Mobile App Activities
 
 📝 This post is mostly about Android.
 
