@@ -8,6 +8,10 @@
 
 Interruption Testing is a type of testing that involves simulating various types of interruptions or distractions that a user may experience while using a mobile app. Some common types of interruptions that may be tested include:
 - [ ] **Incoming Phone Calls**: If an app is being used and an incoming phone call is received, it’s important to test how the app handles the interruption. Does it pause or stop functioning? Does it allow the user to continue using the app while the call is being taken?
+  - For example, simulate a call on an emulator with <code>adb</code>:
+  
+        adb shell am start -a android.intent.action.CALL
+        
 - [ ] **Incoming Text Messages**: Similar to phone calls, incoming texts can interrupt an app and cause it to pause or close. This type of interruption tests how the app handles an incoming text message while it’s being used and ensures it resumes correctly after the interruption ends.
 - [ ] **Notifications or Alarms**: Mobile apps often generate (push) notifications to alert the user of new events or updates. It’s important to test how the app handles notifications and whether the user is able to continue using the app while the notification is being displayed.
 - [ ] **System Alerts**: The OS may generate alerts or notifications that interrupt the app. It’s important to test how the app handles these interruptions and whether it allows the user to continue using the app while the alert is being displayed.
@@ -59,7 +63,7 @@ Android SDK (Software Development Kit). Monkey can run on either a physical devi
 
 The [package name of the Android .apk file](https://github.com/lana-20/android-package-name) is needed to be able to run Monkey; otherwise it will execute its random commands to the entire phone. When the package name (in this case <code>com.appiumpro.the_app</code>) is available, execute Monkey with <code>adb</code> (Android Debug Bridge):
 
-    ./adb shell monkey -p com.appiumpro.the_app -v 2000
+    adb shell monkey -p com.appiumpro.the_app -v 2000
 
 The number 2000 indicates the number of random commands that Monkey will perform. With an additional parameter <code>-s</code> for seed, Monkey will generate the same sequence of events again. This is really important for reproducing a bug that may occur when running Monkey.
 
