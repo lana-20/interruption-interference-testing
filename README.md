@@ -18,6 +18,8 @@ Interruption Testing is a type of testing that involves simulating various types
 - [ ] **Network Changes**:  If the device’s network connection changes while the app is being used (e.g. from WiFi to cellular data), it can interrupt the app and cause it to behave differently. It’s important to test how the zoo handles these interruptions and ensure that it functions properly under different network conditions.
 It’s crucial to test these types of interruptions that may occur while the app is being used to ensure the app provides smooth, seamless, uninterrupted, stable and consistent user experience.
 
+----
+
 Test the following common scenarios for mobile app testing:
 - [ ] ***Rotation*** <img src="https://user-images.githubusercontent.com/70295997/218911298-3c58edef-5015-4b55-9b2c-a300d366aada.png" width=30>
 - [ ] ***Multi-window*** <img src="https://user-images.githubusercontent.com/70295997/218907179-6b0588ad-58dd-4e37-a60b-9b86749ee821.png" width=60>
@@ -44,3 +46,19 @@ Activities serve as containers for every user interaction within your app, so it
 In particular, it's important to ensure that your activity behaves correctly in response to the events described in [Understanding the Activity Lifecycle](https://developer.android.com/guide/components/activities/activity-lifecycle).
 
 Different events, some user-triggered and some system-triggered, can cause an Activity to transition from one state to another. The [Activity State Changes document](https://developer.android.com/guide/components/activities/state-changes) describes some common cases in which such transitions happen, and how to handle those transitions.
+
+----
+
+### Stress and Interrupt Testing
+Stress and interrupt testing is an important part of the mobile testing process. With the aid of tools, mobile testers are able to determine any potential performance or stability issues exhibited by an app. To test your app against interrupts, you can manually trigger lots of notifications to the device while using the app. Notifications can be incoming messages, calls, app updates, or push notifications (software interrupts). Furthermore, pressing the volume up and down buttons or any other kind of hardware button is also an interrupt (hardware interrupt) that can also have an impact on your app.
+
+Doing all of these tasks manually is a lot of work and very time-consuming. In most cases, these test scenarios can’t be done manually because it is very hard to simulate fast and multiple user inputs with one or two hands. But it can be done with the aid of tools, and it is really easy to integrate them into the development and testing process.
+
+For Android apps, a tool called [Monkey](https://developer.android.com/studio/test/other-testing-tools/monkey) can be used which is part of the
+Android SDK (Software Development Kit). Monkey can run on either a physical device or an emulator. While running, it generates pseudo-random user events such as a touch, click, rotate, swipe, mute, Internet connection shutdown, and much more to stress-test the app and see how it handles all those inputs and interrupts.
+
+The [package name of the Android .apk file](https://github.com/lana-20/android-package-name) is needed to be able to run Monkey; otherwise it will execute its random commands to the entire phone. When the package name (in this case <code>com.appiumpro.the_app</code>) is available, execute Monkey with <code>adb</code> (Android Debug Bridge):
+
+    ./adb shell monkey -p com.appiumpro.the_app -v 2000
+
+
