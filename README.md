@@ -61,4 +61,7 @@ The [package name of the Android .apk file](https://github.com/lana-20/android-p
 
     ./adb shell monkey -p com.appiumpro.the_app -v 2000
 
+The number 2000 indicates the number of random commands that Monkey will perform. With an additional parameter <code>-s</code> for seed, Monkey will generate the same sequence of events again. This is really important for reproducing a bug that may occur when running Monkey.
+
+The Monkey tool makes it simple to stress- and interrupt-test a mobile application. Besides that, using them is a huge benefit for mobile testers as it helps the team build a reliable and robust mobile app. It’s useful to combine battery testing with stress and interrupt testing to see how the battery is used when lots of interrupts and user inputs are triggered throughout the app.
 
