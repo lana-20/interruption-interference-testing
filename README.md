@@ -15,7 +15,7 @@ Interruption Testing is a type of testing that involves simulating various types
   - Or, simulate a call on an emulator with Extended Controls: <img src="https://user-images.githubusercontent.com/70295997/222863470-caa0ea5d-aa6c-4a68-b718-2e0d3f7d12ab.png" width=800>
 
 - [ ] **Incoming Text Messages**: Similar to phone calls, incoming texts can interrupt an app and cause it to pause or close. This type of interruption tests how the app handles an incoming text message while it’s being used and ensures it resumes correctly after the interruption ends.
-  - Or, simulate a call on an emulator with Extended Controls: <img src="https://user-images.githubusercontent.com/70295997/222863553-a69d412a-15d7-4589-92a7-db029a6addb1.png" width=800>
+  - For example, simulate an SMS on an emulator with <code>adb</code>: <img src="https://user-images.githubusercontent.com/70295997/222863553-a69d412a-15d7-4589-92a7-db029a6addb1.png" width=800>
   
 - [ ] **Notifications or Alarms**: Mobile apps often generate (push) notifications to alert the user of new events or updates. It’s important to test how the app handles notifications and whether the user is able to continue using the app while the notification is being displayed.
 - [ ] **System Alerts**: The OS may generate alerts or notifications that interrupt the app. It’s important to test how the app handles these interruptions and whether it allows the user to continue using the app while the alert is being displayed.
